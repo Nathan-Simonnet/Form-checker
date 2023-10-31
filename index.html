@@ -6,34 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Form checker</title>
 </head>
 
 <body>
     <form action="">
-        <div class="pseudo-container">
-            <label for="">Pseudo</label>
-            <input type="text" autocomplete="off" id="pseudo">
-            <span></span>
-        </div>
-        <div class="email-container">
-            <label for="">Email</label>
-            <input type="text" autocomplete="off" id="email">
-            <span>Email incorrect</span>
-        </div>
-        <div class="password-container">
-            <label for="">Mot de passe</label>
-            <input type="text" autocomplete="off" id="password">
-            <p id="progress-bar"></p>
-            <span class="password-span"></span>
-        </div>
-        <div class="confirm-container">
-            <label for="">Confirmez le mot de passe</label>
-            <input type="text" autocomplete="off" id="confirm">
-            <span id="spanConfirm"></span>
+
+        <div class="container" id="pseudo-container">
+            <label for="pseudo">Pseudo</label>
+            <input type="text" autocomplete="off" placeholder="Chris31" id="pseudo-input">
+            <span class="validation-span"></span>
         </div>
 
-        <input type="submit">
+        <div class="container" id="mail-container">
+            <label for="mail">Mail</label>
+            <input type="email" autocomplete="off" placeholder="Chris.sergeant31@bbox.fr" id="mail-input">
+            <span class="validation-span"></span>
+        </div>
+
+        <div class="container" id="password-container">
+            <label for="password">Mot de passe</label>
+            <input type="password" autocomplete="off" placeholder="Mot-dE-paSse555!" id=" password-input">
+            <span class="validation-span"></span>
+        </div>
+
+        <div class="container" id="confirm-container">
+            <label for="confirm">Confirmer le mot de passe</label>
+            <input type="confirm" autocomplete="off" placeholder="****************" id="confirm-input">
+            <span class="validation-span"></span>
+        </div>
 
     </form>
 
