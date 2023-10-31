@@ -1,0 +1,90 @@
+* {
+  border: 2px solid red;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(179, 179, 246, 0.217);
+
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1em;
+
+}
+
+form {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+
+  height: 80%;
+  width: 55%;
+
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px 2px #00000021;
+  border-radius: 15px;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    height: 20%;
+    width: 100%;
+
+    padding: 20px;
+
+    & input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      background: rgba(179, 179, 246, 0.217);
+      border-radius: 5px;
+
+      height: 40px;
+      width: 100%;
+    }
+  }
+
+  & #submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10%;
+
+    /* border: 4px solid black; */
+
+  }
+
+
+}
+
+form::after {
+  position: absolute;
+  content: "";
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  box-shadow: 2px 2px 2px 2px #0000000d;
+}
