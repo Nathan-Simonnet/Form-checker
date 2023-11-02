@@ -1,5 +1,5 @@
 * {
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
   margin: 0;
   padding: 0;
@@ -21,6 +21,44 @@ body {
   font-size: 1em;
 
 }
+
+@keyframes test {
+  0% {
+    border-top: #08a4f3 2px solid;
+    border-right: #07f5c9 2px solid;
+    border-bottom: #07f45d 2px solid;
+    border-left: #08da2f 2px solid;
+  }
+
+  25% {
+    border-top: #08da2f 2px solid;
+    border-right: #08a4f3 2px solid;
+    border-bottom: #07f5c9 2px solid;
+    border-left: #07f45d 2px solid;
+  }
+
+  50% {
+    border-top: #07f45d 2px solid;
+    border-right: #08da2f 2px solid;
+    border-bottom: #08a4f3 2px solid;
+    border-left: #07f5c9 2px solid;
+  }
+
+  75% {
+    border-top: #07f5c9 2px solid;
+    border-right: #07f45d 2px solid;
+    border-bottom: #08da2f 2px solid;
+    border-left: #08a4f3 2px solid;
+  }
+
+  100% {
+    border-top: #08a4f3 2px solid;
+    border-right: #07f5c9 2px solid;
+    border-bottom: #07f45d 2px solid;
+    border-left: #08da2f 2px solid;
+  }
+}
+
 
 form {
   position: relative;
@@ -68,11 +106,30 @@ form {
 
     height: 10%;
 
-    /* border: 4px solid black; */
+    & input {
+      cursor: pointer;
 
+      border-image-source: linear-gradient(to bottom, #ff0000, #00ff00);
+      border-image-slice: 1;
+      border-width: 5px;
+      border-style: solid;
+
+      /* border-top-color: blue; */
+
+      /* border-top: #08a4f3 2px solid;
+      border-right: #07f5c9 2px solid;
+      border-bottom: #07f45d 2px solid;
+      border-left: #08da2f 2px solid; */
+    }
+
+    & input:hover {
+      animation: test 2s linear infinite;
+    }
+
+    & input:active {
+      transform: scale(0.9);
+    }
   }
-
-
 }
 
 form::after {
