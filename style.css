@@ -22,94 +22,6 @@ body {
 
 }
 
-@keyframes btnAnim {
-  0% {
-    background: linear-gradient(rgba(0, 0, 255, 0.543) 5%, transparent 5%, transparent 100%);
-  }
-
-  5% {
-    background: linear-gradient(transparent 3%, rgba(0, 0, 255, 0.543) 10%, transparent 12%, transparent 100%);
-  }
-
-  10% {
-    background: linear-gradient(transparent 7%, rgba(0, 0, 255, 0.543) 15%, transparent 17%, transparent 100%);
-  }
-
-  15% {
-    background: linear-gradient(transparent 13%, rgba(0, 0, 255, 0.543) 20%, transparent 22%, transparent 100%);
-  }
-
-  20% {
-    background: linear-gradient(transparent 18%, rgba(0, 0, 255, 0.543) 25%, transparent 27%, transparent 100%);
-  }
-
-  25% {
-    background: linear-gradient(transparent 23%, rgba(0, 0, 255, 0.543) 30%, transparent 32%, transparent 100%);
-  }
-
-  30% {
-    background: linear-gradient(transparent 28%, rgba(0, 0, 255, 0.543) 35%, transparent 37%, transparent 100%);
-  }
-
-  35% {
-    background: linear-gradient(transparent 33%, rgba(0, 0, 255, 0.543) 40%, transparent 42%, transparent 100%);
-  }
-
-  40% {
-    background: linear-gradient(transparent 38%, rgba(0, 0, 255, 0.543) 45%, transparent 47%, transparent 100%);
-  }
-
-  45% {
-    background: linear-gradient(transparent 43%, rgba(0, 0, 255, 0.543) 50%, transparent 48%, transparent 100%);
-  }
-
-  50% {
-    background: linear-gradient(transparent 48%, rgba(0, 0, 255, 0.543) 55%, transparent 57%, transparent 100%);
-  }
-
-  55% {
-    background: linear-gradient(transparent 57%, rgba(0, 0, 255, 0.543) 60%, transparent 62%, transparent 100%);
-  }
-
-  60% {
-    background: linear-gradient(transparent 58%, rgba(0, 0, 255, 0.543) 65%, transparent 63%, transparent 100%);
-  }
-
-  65% {
-    background: linear-gradient(transparent 63%, rgba(0, 0, 255, 0.543) 70%, transparent 72%, transparent 100%);
-  }
-
-  70% {
-    background: linear-gradient(transparent 68%, rgba(0, 0, 255, 0.543) 75%, transparent 77%, transparent 100%);
-  }
-
-  75% {
-    background: linear-gradient(transparent 73%, rgba(0, 0, 255, 0.543) 80%, transparent 82%, transparent 100%);
-  }
-
-  80% {
-    background: linear-gradient(transparent 78%, rgba(0, 0, 255, 0.543) 85%, transparent 87%, transparent 100%);
-  }
-
-  85% {
-    background: linear-gradient(transparent 83%, rgba(0, 0, 255, 0.543) 90%, transparent 92%, transparent 100%);
-  }
-
-  90% {
-    background: linear-gradient(transparent 88%, rgba(0, 0, 255, 0.543) 95%, transparent 97%, transparent 100%);
-  }
-
-  95% {
-    background: linear-gradient(transparent 93%, rgba(0, 0, 255, 0.543) 100%);
-  }
-
-  100% {
-    background: linear-gradient(transparent 100%, rgba(0, 0, 255, 0.543));
-  }
-
-}
-
-
 @keyframes test {
   0% {
 
@@ -117,41 +29,40 @@ body {
   }
 
   20% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(50deg, #08a4f3 0%, #08da2f 100%);
   }
 
   30% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(90deg, #08a4f3 0%, #08da2f 100%);
   }
 
   40% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(130deg, #08a4f3 0%, #08da2f 100%);
   }
 
   50% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(170deg, #08a4f3 0%, #08da2f 100%);
   }
 
   60% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(210deg, #08a4f3 0%, #08da2f 100%);
   }
 
   70% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(250deg, #08a4f3 0%, #08da2f 100%);
   }
 
   80% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(290deg, #08a4f3 0%, #08da2f 100%);
   }
 
   90% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(330deg, #08a4f3 0%, #08da2f 100%);
   }
 
   100% {
-    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-source: linear-gradient(370deg, #08a4f3 0%, #08da2f 100%);
   }
-
 }
 
 
@@ -204,15 +115,17 @@ form {
     & input {
       cursor: pointer;
 
+      width: 80px;
+
       border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
       border-image-slice: 1;
-      border-width: 5px;
-      border-style: solid;
+      border-width: 3px;
+
     }
 
     & input:hover {
-      animation: test 2s linear infinite;
 
+      animation: test 1.2s linear infinite;
     }
 
     & input:active {
