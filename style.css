@@ -95,11 +95,42 @@ form {
       justify-content: center;
       align-items: center;
 
-
       background: rgba(179, 179, 246, 0.217);
       border-radius: 5px;
+      border: rgba(128, 128, 128, 0.111) 1px solid;
 
+      padding: 4px;
       height: 2em;
+      width: 100%;
+    }
+
+    & span {
+      font-size: 0.6em;
+      height: 2em;
+      margin: 4px 0 0 0;
+    }
+
+    & #password-bar {
+      background: rgba(255, 0, 0, 0);
+      height: 4px;
+      width: 1%;
+      margin: 4px 0 4px 0;
+    }
+
+    & #password-bar.red {
+      background: rgb(255, 0, 0);
+      width: 20%;
+    }
+
+    & #password-bar.blue {
+
+      background: blue;
+      width: 40%;
+    }
+
+    & #password-bar.green {
+
+      background: green;
       width: 100%;
     }
   }
@@ -119,11 +150,10 @@ form {
       border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
       border-image-slice: 1;
       border-width: 3px;
-
     }
 
     & input:hover {
-
+      outline: none;
       animation: test 1.2s linear infinite;
     }
 
