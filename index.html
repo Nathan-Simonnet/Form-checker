@@ -11,6 +11,7 @@
 
 <body>
     <form action="">
+        <span id="cheat">Cheat</span>
 
         <div class="container" id="pseudo-container">
             <label for="pseudo-input">Pseudo</label>
@@ -20,14 +21,13 @@
 
         <div class="container" id="mail-container">
             <label for="mail-input">Email</label>
-            <input type="email" autocomplete="off" placeholder="Chris.sergeant31@bbox.fr" id="mail-input">
+            <input type="email" placeholder="Chris.sergeant31@bbox.fr" id="mail-input">
             <span class="validation-span" id="mail-span"></span>
         </div>
 
         <div class="container" id="password-container">
             <label for="password-input">Mot de passe</label>
             <input type="text" autocomplete="off" placeholder="Mot-De-Passe555!" id="password-input">
-            <!-- mmm.dd@gmail.com -->
             <span class="validation-span" id="password-span"></span>
             <span class="validation-span" id="password-bar"></span>
         </div>
@@ -38,7 +38,9 @@
             <span class="validation-span" id="confirm-span"></span>
         </div>
         <div class="container" id="submit-container">
-            <input type="submit">
+            <span id="submit-span">
+                <input type="submit" id="submit-input">
+            </span>
         </div>
 
 

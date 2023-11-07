@@ -73,8 +73,8 @@ form {
   justify-content: center;
   align-items: center;
 
-  height: 80%;
-  width: 50%;
+  height: 600px;
+  width: 500px;
 
   background: rgb(255, 255, 255);
   box-shadow: 2px 2px 2px 2px #00000021;
@@ -86,11 +86,10 @@ form {
     justify-content: center;
     align-items: baseline;
 
-    height: 80px;
+    height: 100px;
     width: 80%;
 
-
-    & input {
+    & input:not([type="submit"]) {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,12 +99,12 @@ form {
       border: rgba(128, 128, 128, 0.111) 1px solid;
 
       padding: 4px;
-      height: 2em;
+      height: 60px;
       width: 100%;
     }
 
     & span {
-      font-size: 0.6em;
+      font-size: em;
       height: 2em;
       margin: 4px 0 0 0;
     }
@@ -115,6 +114,8 @@ form {
       height: 4px;
       width: 1%;
       margin: 4px 0 4px 0;
+
+      transition: 0.3s;
     }
 
     & #password-bar.red {
@@ -124,7 +125,7 @@ form {
 
     & #password-bar.blue {
 
-      background: blue;
+      background: rgb(255, 187, 0);
       width: 40%;
     }
 
@@ -135,33 +136,42 @@ form {
     }
   }
 
-  & #submit-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 10%;
-
-    & input {
-      cursor: pointer;
-
-      width: 80px;
-
-      border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
-      border-image-slice: 1;
-      border-width: 3px;
-    }
-
-    & input:hover {
-      outline: none;
-      animation: test 1.2s linear infinite;
-    }
-
-    & input:active {
-      transform: scale(0.9);
-    }
+  & #password-container {
+    height: 120px;
   }
 }
+
+
+#submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 10%;
+
+  & input {
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+
+    border-image-source: linear-gradient(10deg, #08a4f3 0%, #08da2f 100%);
+    border-image-slice: 1;
+    border-width: 4px;
+    animation: test 1.2s linear infinite;
+
+    transition: 0.3s;
+  }
+
+  & input:hover {
+    outline: none;
+    transform: scale(1.2);
+  }
+
+  & input:active {
+    transform: scale(0.9);
+  }
+}
+
 
 form::after {
   position: absolute;
@@ -169,9 +179,14 @@ form::after {
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   box-shadow: 2px 2px 2px 2px #0000000d;
+}
+
+#cheat {
+  cursor: pointer;
+  opacity: 0;
 }
