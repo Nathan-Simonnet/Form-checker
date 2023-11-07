@@ -1,11 +1,11 @@
 const inputs = document.querySelectorAll('input');
-
+let actualPseudo, actualMail, actualPassword;
 let isPseudoValid = false;
 let isMailValid = false;
 let isPasswordValid = false;
 let isConfirmValid = false;
 
-let actualPseudo = "";
+
 const pseudoHandler = function () {
     actualPseudo = "";
     isPseudoValid = false;
@@ -30,7 +30,6 @@ const pseudoHandler = function () {
     }
 }
 
-let actualMail = "";
 const mailHandler = function () {
     actualMail = "";
     isMailValid = false;
@@ -55,7 +54,6 @@ const mailHandler = function () {
     }
 }
 
-let actualPassword = "";
 const passwordHandler = function () {
 
     isPasswordValid = false;
@@ -108,7 +106,7 @@ const confirmHandler = function () {
         if (isPasswordValid == false) {
             span.textContent = "Entrez d'abord un mot de passe valide";
             span.style.color = "red";
-        } else if (isPasswordValid == true && input.value == actualPassword) {
+        } else if (isPasswordValid && input.value == actualPassword) {
             span.textContent = "It's a match!";
             span.style.color = "green";
             isConfirmValid = true;
@@ -147,14 +145,17 @@ document.getElementById('cheat').addEventListener('click', () => {
         if (input.id == "pseudo-input") {
             input.value = "PPP";
             isPseudoValid = true;
+            actualPseudo = input.value
 
         } else if (input.id == "mail-input") {
             input.value = "PPP-PPP@ppp.com";
             isMailValid = true;
+            actualMail = input.value
 
         } else if (input.id == "password-input") {
             input.value = "Azerty-1234!pppp";
             isPasswordValid = true;
+            actualPassword = input.value
 
         } else if (input.id == "confirm-input") {
             input.value = "Poiu-1056!pppp";
@@ -163,9 +164,28 @@ document.getElementById('cheat').addEventListener('click', () => {
     });
 });
 
+let indexEffort = 0;
 document.querySelector('input[type="submit"]').addEventListener('click', (e) => {
 
-    if (isPseudoValid == true && isMailValid == true && isPasswordValid == true && isConfirmValid == true) {
+    if (!isPseudoValid && !isMailValid && !isPasswordValid && !isConfirmValid && indexEffort == 0) {
+        e.preventDefault()
+        indexEffort++;
+        return alert("Nan mais un effort quand même")
+    }
+    if (!isPseudoValid && !isMailValid && !isPasswordValid && !isConfirmValid && indexEffort == 1) {
+        indexEffort++;
+        e.preventDefault()
+        return alert("Dernière chance...")
+    }
+    if (!isPseudoValid && !isMailValid && !isPasswordValid && !isConfirmValid && indexEffort == 2) {
+        indexEffort++;
+        e.preventDefault()
+        return alert("Bou!... Bon aller, on se concentre")
+    }
+
+
+
+    if (isPseudoValid && isMailValid && isPasswordValid && isConfirmValid) {
         console.log("ouiii")
         let data = {
             pseudo: actualPseudo,
@@ -174,11 +194,9 @@ document.querySelector('input[type="submit"]').addEventListener('click', (e) => 
         }
 
         console.log(data);
-        data = {
-            pseudo: "",
-            mail: "",
-            password: "",
-        }
+        alert("Bienvenue " + data.pseudo)
+        data = {};
+        console.log(data)
         actualPseudo = "";
         actualMail = "";
         actualPassword = "";
@@ -187,19 +205,18 @@ document.querySelector('input[type="submit"]').addEventListener('click', (e) => 
             input.value = "";
         });
 
-
-
     } else {
-        alert("il semblerait qu'un élément soit manquant ou incomplet")
+
         e.preventDefault()
+
+        let pseudoMissing, mailMissing, passwordMissing, confirmMissing;
+        isPseudoValid == false ? pseudoMissing = "le pseudo, " : pseudoMissing = "";
+        isMailValid == false ? mailMissing = "l'email, " : mailMissing = "";
+        isPasswordValid == false || isConfirmValid == false ? passwordMissing = "le mot de passe, " : passwordMissing = "";
+
+        alert("Veillez à compléter correctement " + pseudoMissing + mailMissing + passwordMissing + "afin de valider le formulaire.")
+
     }
 });
 
 
-// console.time("tempsExecution");
-
-// // Votre fonction ou code à mesurer
-// votreFonctionOuCode();
-
-// // Arrête le compteur et affiche le temps écoulé dans la console
-// console.timeEnd("tempsExecution");
