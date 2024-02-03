@@ -1,2 +1,2 @@
 # Form-checker
-Another old JS project who need a new fresh cut
+Another old JS project who needs a new fresh cut
